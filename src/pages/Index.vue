@@ -263,7 +263,8 @@ export default {
             this.funcGoto('filter')
 		},
 
-		// dropdown
+		// dropdown 下拉選單
+        //點擊
 		dropdownClick(event) {
 			let el = event.currentTarget;
 			$(el)
@@ -275,12 +276,14 @@ export default {
 				.find('.dropdown-menu')
 				.slideToggle(300);
 		},
+        // focus 改變圖片
 		dropdownFocus(event) {
 			let el = event.currentTarget;
 			$(el)
 				.find('.inner img')
 				.attr('src', this.getImgUrl('icon_select_up.png'));
 		},
+        // focusout 改變圖片與收合
 		dropdownFocusout(event) {
 			let el = event.currentTarget;
 			$(el).removeClass('active');
@@ -291,6 +294,7 @@ export default {
 				.find('.dropdown-menu')
 				.slideUp(300);
 		},
+        // LiClick 更新資料
 		dropdownLiClick(event) {
 			let el = event.currentTarget;
 			$(el)

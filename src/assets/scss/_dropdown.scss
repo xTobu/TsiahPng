@@ -1,6 +1,6 @@
 /*dropdown*/
 
-.dropdown {
+div.dropdown {
     font-family: 'STFangsong';
     width: 100%;
     max-width: 290px;
@@ -19,7 +19,7 @@
         position: relative;
         height: 55px;
         .inner {
-			padding: 0 0 0 20px;
+            padding: 0 0 0 20px;
             position: relative;
             top: 50%;
             transform: translateY(-50%);
