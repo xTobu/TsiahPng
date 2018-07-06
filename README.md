@@ -1,7 +1,8 @@
 
-# Tsiah Png
+# Tsiah Png - 中午吃什麼
 
-> 中午吃什麼
+> 2018 WebGene 實習生專案  
+
 
  - vue
  - vuex
