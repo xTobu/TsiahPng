@@ -15,31 +15,7 @@
 
 @import './dropdown';
 @import './common';
-
-/* header */
-
-header {
-    position: fixed;
-    top: 0;
-    z-index: 5;
-    width: 100%;
-    height: 75px;
-    background-color: rgba(0, 0, 0, 0.78);
-    div.inner {
-        text-align: center;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        ul li {
-            display: inline;
-            margin: 25px;
-            a {
-                font-family: 'STFangsong';
-                font-size: 17px;
-            }
-        }
-    }
-}
+@import './header';
 
 /****************************/
 
@@ -257,8 +233,3 @@ footer {
     }
 }
 
-@media screen and (max-width: 767px) {
-    .dropdown {
-        width: 100%;
-    }
-}
