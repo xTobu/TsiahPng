@@ -10,18 +10,16 @@
  - sass-loader
  - axios
  - qs
- - element 
- - url-loader（引用ElementUI樣式時需要編譯字型檔）
 
 ## Build Setup
 
 ```bash
-# install dependencies
+# 安裝套件
 npm install
 
-# serve with hot reload at localhost:8080
+# 開發模式 hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
+# 編譯與發行
 npm run build
 ```
