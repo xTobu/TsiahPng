@@ -181,7 +181,7 @@
 export default {
 	data() {
 		return {
-			RestaurantsList:this.$store.state.RestaurantsList,
+			RestaurantsList: this.$store.state.RestaurantsList,
 			image: {},
 			setting: {
 				price: ['便宜', '普通', '高價'],
@@ -230,41 +230,40 @@ export default {
 			let filterPrice = undefined;
 			let filterPurpose = undefined;
 
-			// 如果 setting 打開
+			// 如果 setting switch 打開
 			if (this.state.switch !== 'more') {
 				filterPrice = this.state.filter.price;
 				filterPurpose = this.state.filter.purpose;
 			} else {
-				// 如果 setting 未打開
+				// 如果 setting switch 未打開
 				filterPrice = '';
 				filterPurpose = '';
 			}
-			/**
-			 * 過濾資料
-			 */
+
+			//整理與過濾資料            
 			let arrFiltered = this.RestaurantsList.filter((item, index, array) => {
 				return (
 					item.price.indexOf(filterPrice) > -1 &&
 					item.purpose.indexOf(filterPurpose) > -1
 				);
 			});
-			// 如果沒有資料
+			// 如果查無資料
 			if (arrFiltered.length == 0) {
 				alert('查無資料');
 				return;
-            }
-           
-			// 隨機產生
+			}
+
+			// 從陣列裡隨機取出一個, 並填到 this.randombox 
 			this.randombox =
 				arrFiltered[Math.floor(Math.random() * arrFiltered.length)];
 
 			//更改 random 顯示與不顯示
-            this.state.random = !this.state.random;
-            this.funcGoto('filter')
+			this.state.random = !this.state.random;
+			this.funcGoto('filter');
 		},
 
 		// dropdown 下拉選單
-        //點擊
+		//點擊
 		dropdownClick(event) {
 			let el = event.currentTarget;
 			$(el)
@@ -276,14 +275,14 @@ export default {
 				.find('.dropdown-menu')
 				.slideToggle(300);
 		},
-        // focus 改變圖片
+		// focus 改變圖片
 		dropdownFocus(event) {
 			let el = event.currentTarget;
 			$(el)
 				.find('.inner img')
 				.attr('src', this.getImgUrl('icon_select_up.png'));
 		},
-        // focusout 改變圖片與收合
+		// focusout 改變圖片與收合
 		dropdownFocusout(event) {
 			let el = event.currentTarget;
 			$(el).removeClass('active');
@@ -294,7 +293,7 @@ export default {
 				.find('.dropdown-menu')
 				.slideUp(300);
 		},
-        // LiClick 更新資料
+		// LiClick 更新資料
 		dropdownLiClick(event) {
 			let el = event.currentTarget;
 			$(el)
@@ -313,9 +312,7 @@ export default {
 		},
 	},
 
-	mounted() {
-		
-	},
+	mounted() {},
 };
 </script>
 
