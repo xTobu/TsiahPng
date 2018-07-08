@@ -29,15 +29,15 @@ header {
     }
     div.sidebar {
         height: 100%;
-        width: 0;
+        width: 250px;
         position: fixed;
         z-index: 1;
         top: 0;
-        left: 0;
+        left: -250px;
         background-color: rgba(0, 0, 0, 0.78);
         overflow-x: hidden;
         padding-top: 100px;
-        // transition: 0.5s;
+        transition: 0.5s;
         a {
             font-family: 'STFangsong';
             padding: 15px 0px 15px 0px;

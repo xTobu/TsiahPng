@@ -23,7 +23,7 @@
             </a>
         </div>
 
-        <div id="sidebar" class="sidebar" :style="{width: state.burbox?'250px':'0px'}">
+        <div id="sidebar" class="sidebar" :style="{left: state.burbox?'0px':'-250px'}">
             <a href="#" @click.prevent="funcGoto('index')">首　頁</a>
             <a href="#" @click.prevent="funcGoto('filter')">篩　選</a>
             <a href="#" @click.prevent="funcGoto('inspired')">找點子</a>
