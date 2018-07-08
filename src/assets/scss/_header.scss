@@ -7,6 +7,9 @@ header {
     width: 100%;
     height: 75px;
     background-color: rgba(0, 0, 0, 0.78);
+    @media screen and (max-width: 767px) {
+        background-color: rgba(0, 0, 0, 0);
+    }
     div.inner {
         text-align: center;
         position: relative;
@@ -19,6 +22,49 @@ header {
                 font-family: 'STFangsong';
                 font-size: 17px;
             }
+        }
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+    div.sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.78);
+        overflow-x: hidden;
+        padding-top: 100px;
+        // transition: 0.5s;
+        a {
+            font-family: 'STFangsong';
+            padding: 15px 0px 15px 0px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 25px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+        a:hover {
+            color: #f1f1f1;
+        }
+        .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+    }
+    @media screen and (max-height: 450px) {
+        .sidebar {
+            padding-top: 15px;
+        }
+        .sidebar a {
+            font-size: 18px;
         }
     }
 }

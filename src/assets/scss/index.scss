@@ -1,21 +1,8 @@
-@font-face {
-    font-family: 'STFangsong';
-    src: url('../assets/font/chinese.stfangso.ttf') format('opentype');
-}
-
-@font-face {
-    font-family: 'NotoSans-Thin';
-    src: url('../assets/font/NotoSans-Thin.ttf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Roboto-Thin';
-    src: url('../assets/font/Roboto-Thin.ttf') format('opentype');
-}
-
-@import './dropdown';
 @import './common';
+@import './dropdown';
 @import './header';
+@import './burBox';
+
 
 /****************************/
 

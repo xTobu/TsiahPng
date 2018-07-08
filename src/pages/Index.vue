@@ -1,19 +1,34 @@
 <template>
 <div>
     <header>
-        <div class="inner">
-            <ul>
-                <li>
-                    <a href="#" @click.prevent="funcGoto('index')">首　頁</a>
-                </li>
-                <li>
-                    <a href="#" @click.prevent="funcGoto('filter')">篩　選</a>
-                </li>
-                <li>
-                    <a href="#" @click.prevent="funcGoto('inspired')">找點子</a>
-                </li>
-            </ul>
+        <div class="inner">            
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" @click.prevent="funcGoto('index')">首　頁</a>
+                    </li>
+                    <li>
+                        <a href="#" @click.prevent="funcGoto('filter')">篩　選</a>
+                    </li>
+                    <li>
+                        <a href="#" @click.prevent="funcGoto('inspired')">找點子</a>
+                    </li>
+                </ul>
+            </nav>            
+                 
         </div>
+        <div class="burBox">
+            <a class="bur active" href="javascript:void(0)">
+                <span></span>
+            </a>
+        </div>
+        <div id="sidebar" class="sidebar">
+            <a href="#" @click.prevent="funcGoto('index')">首　頁</a>
+            <a href="#" @click.prevent="funcGoto('filter')">篩　選</a>
+            <a href="#" @click.prevent="funcGoto('inspired')">找點子</a>
+                    
+        </div>   
+        
     </header>
     <div class="wrap">
         <!-- 首頁 -->
@@ -240,7 +255,7 @@ export default {
 				filterPurpose = '';
 			}
 
-			//整理與過濾資料            
+			//整理與過濾資料
 			let arrFiltered = this.RestaurantsList.filter((item, index, array) => {
 				return (
 					item.price.indexOf(filterPrice) > -1 &&
@@ -253,7 +268,7 @@ export default {
 				return;
 			}
 
-			// 從陣列裡隨機取出一個, 並填到 this.randombox 
+			// 從陣列裡隨機取出一個, 並填到 this.randombox
 			this.randombox =
 				arrFiltered[Math.floor(Math.random() * arrFiltered.length)];
 
