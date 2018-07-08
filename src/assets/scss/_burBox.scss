@@ -1,14 +1,12 @@
+// 參考 小苗
+
 $bur_w:42px;
 $bur_w_s:40px;
 $bur_h:5px;
 $bur_h_s:3px;
 $color:#fff;
 
-@media screen and (min-width: 767px) {
-    .burBox {
-        display: none;
-    }
-}
+
 a.bur {
     cursor: pointer;
     padding: 9px 0 14px;
@@ -69,10 +67,11 @@ a.bur {
     left: 20px;
     transform: translateY(-50%);
     z-index: 10;
+    @media screen and (min-width: 767px) {        
+            display: none;        
+    }
     a.active {
-        padding: 9px 0 16px; // @media screen and (max-width: 767px) {
-        //     padding: 14px 0 16px;
-        // }
+        padding: 9px 0 16px; 
         span {
             background: transparent;
             &:before {
