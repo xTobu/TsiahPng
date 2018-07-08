@@ -18,11 +18,12 @@
                  
         </div>
         <div class="burBox">
-            <a class="bur active" href="javascript:void(0)">
+            <a v-bind:class="{ bur: true, active: state.burbox }" @click.prevent ="burboxClick($event)" @focusout="burboxFocusout($event)" href="javascript:void(0)">
                 <span></span>
             </a>
         </div>
-        <div id="sidebar" class="sidebar">
+
+        <div id="sidebar" class="sidebar" :style="{width: state.burbox?'250px':'0px'}">
             <a href="#" @click.prevent="funcGoto('index')">首　頁</a>
             <a href="#" @click.prevent="funcGoto('filter')">篩　選</a>
             <a href="#" @click.prevent="funcGoto('inspired')">找點子</a>
@@ -210,6 +211,7 @@ export default {
 				purpose: '一般',
 			},
 			state: {
+				burbox: false,
 				switch: 'more',
 				random: false,
 
@@ -277,6 +279,19 @@ export default {
 			this.funcGoto('filter');
 		},
 
+        //Burbox 漢堡選單
+        burboxClick(event) {
+			let el = event.currentTarget;
+			$(el)
+				.attr('tabindex', 1)
+				.focus();
+            this.state.burbox = ! this.state.burbox;
+		},
+        burboxFocusout(event) {
+			let el = event.currentTarget;			
+            this.state.burbox = ! this.state.burbox;
+
+		},
 		// dropdown 下拉選單
 		//點擊
 		dropdownClick(event) {

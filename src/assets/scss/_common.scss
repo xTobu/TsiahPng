@@ -1,4 +1,5 @@
 /* Common*/
+
 @font-face {
     font-family: 'STFangsong';
     src: url('../assets/font/chinese.stfangso.ttf') format('opentype');
@@ -14,6 +15,10 @@
     src: url('../assets/font/Roboto-Thin.ttf') format('opentype');
 }
 
+//移除 focus 的邊框
+*:focus {
+    outline: none;
+}
 
 a {
     text-decoration: none;
