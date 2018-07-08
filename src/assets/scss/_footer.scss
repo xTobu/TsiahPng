@@ -2,12 +2,10 @@
 
 $footer_li_height_m:20px;
 footer {
-    position: relative;
     height: 75px;
-    background-color: #1c1d24; //padding: 10px 25px;
+    background-color: #1c1d24; 
     font-size: 0;
-    letter-spacing: 0;
-    ul {
+    ul  {
         display: inline-block;
         vertical-align: middle;
         li {
@@ -23,10 +21,10 @@ footer {
         transform: translateY(-50%);
         ul.info {
             width: 70%;
-            .logo {
+            img.logo {
                 width: 115px;
             }
-            .address {
+            span.address {
                 font-family: 'STFangsong';
                 font-size: 15px;
                 padding: 0 50px;
@@ -35,8 +33,6 @@ footer {
         ul.social {
             width: 30%;
             text-align: right;
-            position: relative;
-            top: 50%;
             li {
                 display: inline;
                 margin: 0 10px;
@@ -49,9 +45,7 @@ footer {
             }
         }
     }
-    div.inner>* {
-        vertical-align: middle;
-    }
+    
 }
 
 @media screen and (max-width: 767px) {
