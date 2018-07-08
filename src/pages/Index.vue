@@ -166,11 +166,18 @@
         </section>
     </div>
     <footer>
-        <div class="inner ">
-            <a href="http://webgene.com.tw/" target="_blank">
-            <img class="logo" src="../assets/images/footer_logo.jpg" alt="">
-            </a>
-            <span class="address">台北市106大安區忠孝東路四段325號9樓</span>
+        <div class="inner">
+            <ul class="info">
+                <li>
+                    <a href="http://webgene.com.tw/" target="_blank">
+                        <img class="logo" src="../assets/images/footer_logo.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <span class="address">台北市106大安區忠孝東路四段325號9樓</span>
+                </li>
+            </ul>           
+            
             <ul class="social">
                 <li>
                     <a href="http://blog.webgene.com.tw/" target="_blank">
@@ -231,7 +238,9 @@ export default {
 		funcGoto(classname) {
 			$('html, body').animate(
 				{
-					scrollTop: $('section.' + classname).offset().top - 75,
+					scrollTop:
+						$('section.' + classname).offset().top +
+						(window.innerWidth >= 768 ? -75 : 0),
 				},
 				400
 			);
@@ -279,18 +288,17 @@ export default {
 			this.funcGoto('filter');
 		},
 
-        //Burbox 漢堡選單
-        burboxClick(event) {
+		//Burbox 漢堡選單
+		burboxClick(event) {
 			let el = event.currentTarget;
 			$(el)
 				.attr('tabindex', 1)
 				.focus();
-            this.state.burbox = ! this.state.burbox;
+			this.state.burbox = !this.state.burbox;
 		},
-        burboxFocusout(event) {
-			let el = event.currentTarget;			
-            this.state.burbox = ! this.state.burbox;
-
+		burboxFocusout(event) {
+			let el = event.currentTarget;
+			this.state.burbox = !this.state.burbox;
 		},
 		// dropdown 下拉選單
 		//點擊
