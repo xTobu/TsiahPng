@@ -5,8 +5,8 @@ module.exports = {
   // entry: './src/main.js',
   entry: ['babel-polyfill', './src/main.js'],
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, 'dist'),
+		publicPath: '/dist/',
     filename: 'build.js'
   },
   
@@ -104,6 +104,7 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
+  module.exports.output.publicPath = './dist/';
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([

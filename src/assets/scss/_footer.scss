@@ -3,9 +3,9 @@
 $footer_li_height_m:20px;
 footer {
     height: 75px;
-    background-color: #1c1d24; 
+    background-color: #1c1d24;
     font-size: 0;
-    ul  {
+    ul {
         display: inline-block;
         vertical-align: middle;
         li {
@@ -28,6 +28,9 @@ footer {
                 font-family: 'STFangsong';
                 font-size: 15px;
                 padding: 0 50px;
+                @media screen and (max-width: 767px) {
+                    padding: 0;
+                }
             }
         }
         ul.social {
@@ -45,7 +48,6 @@ footer {
             }
         }
     }
-    
 }
 
 @media screen and (max-width: 767px) {

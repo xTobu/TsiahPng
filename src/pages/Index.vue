@@ -16,7 +16,8 @@
                 </ul>
             </nav>
         </div>
-
+        
+        
         <div class="burBox">
             <a v-bind:class="{ bur: true, active: state.burbox }" @click.prevent ="burboxClick($event)" @focusout="burboxFocusout($event)" href="javascript:void(0)">
                 <span></span>
@@ -298,7 +299,7 @@ export default {
 		},
 		burboxFocusout(event) {
 			let el = event.currentTarget;
-			this.state.burbox = !this.state.burbox;
+			this.state.burbox = false;
 		},
 		// dropdown 下拉選單
 		//點擊

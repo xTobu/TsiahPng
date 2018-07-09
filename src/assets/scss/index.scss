@@ -162,7 +162,10 @@ div.wrap {
                         font-size: 19px;
                         padding: 20px 0;
                     }
-                }
+                } // tablet
+                @media (min-width: 768px) and (max-width: 1024px) {
+                    width: 50%;
+                } // m
                 @media screen and (max-width: 767px) {
                     width: 100%;
                 }
