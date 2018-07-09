@@ -12,8 +12,6 @@ import App from './App';
 //import 'element-ui/lib/theme-chalk/index.css';
 //Vue.use(ElementUI)
 
-
-
 new Vue({
 	el: '#app',
 	store,
