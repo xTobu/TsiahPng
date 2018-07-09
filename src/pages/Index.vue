@@ -1,7 +1,7 @@
 <template>
 <div>
     <header>
-        <div class="inner">            
+        <div class="inner" :style=" { left: this.state.burbox ? '0px' : '' }">            
             <nav>
                 <ul>
                     <li>
@@ -14,21 +14,19 @@
                         <a href="#" @click.prevent="funcGoto('inspired')">找點子</a>
                     </li>
                 </ul>
-            </nav>            
-                 
+            </nav>
         </div>
+
         <div class="burBox">
             <a v-bind:class="{ bur: true, active: state.burbox }" @click.prevent ="burboxClick($event)" @focusout="burboxFocusout($event)" href="javascript:void(0)">
                 <span></span>
             </a>
         </div>
-
-        <div id="sidebar" class="sidebar" :style="{left: state.burbox?'0px':'-250px'}">
+        <!-- <div id="sidebar" class="sidebar" :style="{ left: state.burbox ? '0px':'-250px'}">
             <a href="#" @click.prevent="funcGoto('index')">首　頁</a>
             <a href="#" @click.prevent="funcGoto('filter')">篩　選</a>
-            <a href="#" @click.prevent="funcGoto('inspired')">找點子</a>
-                    
-        </div>   
+            <a href="#" @click.prevent="funcGoto('inspired')">找點子</a>                    
+        </div> -->
         
     </header>
     <div class="wrap">
@@ -230,7 +228,9 @@ export default {
 		};
 	},
 
-	computed: {},
+	computed: {
+		
+	},
 	methods: {
 		getImgUrl: function(name) {
 			return require('../assets/images/' + name);

@@ -1,6 +1,6 @@
 @import './sidebar';
-
 /* header */
+
 header {
     position: fixed;
     top: 0;
@@ -9,7 +9,7 @@ header {
     height: 75px;
     background-color: rgba(0, 0, 0, 0.78);
     @media screen and (max-width: 767px) {
-        background-color: rgba(0, 0, 0, 0);
+         background-color: rgba(0, 0, 0, 0);
     }
     div.inner {
         text-align: center;
@@ -25,7 +25,31 @@ header {
             }
         }
         @media screen and (max-width: 767px) {
-            display: none;
+            // display: none;
+        }
+        
+    }
+    // mobile sidebar
+@media screen and (max-width: 767px) {
+    div.inner {
+        left:-250px;
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.78);
+        overflow-x: hidden;
+        padding-top: 150px;
+        transition: 0.5s;
+        ul li {
+            margin: 0px;
+            a {
+                padding: 15px 0px 15px 0px;
+                font-size: 25px;
+                display: block;
+            }
         }
     }
 }
+}
+
