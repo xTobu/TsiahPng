@@ -23,6 +23,7 @@
                 <span></span>
             </a>
         </div>
+        <!-- 改成從一個 Div 做 RWD -->
         <!-- <div id="sidebar" class="sidebar" :style="{ left: state.burbox ? '0px':'-250px'}">
             <a href="#" @click.prevent="funcGoto('index')">首　頁</a>
             <a href="#" @click.prevent="funcGoto('filter')">篩　選</a>
