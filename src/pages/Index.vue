@@ -204,7 +204,7 @@
 export default {
 	data() {
 		return {
-			RestaurantsList: this.$store.state.RestaurantsList,
+			// RestaurantsList: this.$store.state.RestaurantsList,
 			image: {},
 			setting: {
 				price: ['便宜', '普通', '高價'],
@@ -231,7 +231,10 @@ export default {
 	},
 
 	computed: {
-		
+		// a computed getter
+		RestaurantsList: function() {
+			return this.$store.state.RestaurantsList;
+		},
 	},
 	methods: {
 		getImgUrl: function(name) {
@@ -351,7 +354,9 @@ export default {
 				.trim();
 		},
 	},
-
+	created() {
+		this.$store.dispatch('getRestaurantList');
+	},
 	mounted() {},
 };
 </script>

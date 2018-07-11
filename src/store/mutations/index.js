@@ -1,11 +1,6 @@
 export default {
-	increment(state) {
-		state.count++;
-	},
-	decrement(state) {
-		state.count--;
-	},
-	Change(state,payload){
-		state.student = payload.student;
-	}
+    setRestaurantList(state, res) {
+        state.RestaurantsList = res;
+        console.log(res[0]);
+    },
 };
