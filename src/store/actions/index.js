@@ -8,3 +8,13 @@ export default {
             })    }
 
 };
+
+
+/**
+ * 參考: https://www.jianshu.com/p/f73a6d2806a8
+ */
+
+/**
+ * 如果之後要判斷Loading 
+ * https://stackoverflow.com/questions/41835716/how-do-i-set-initial-state-in-vuex-2
+ */
