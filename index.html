@@ -2,19 +2,81 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>中午吃什麼</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,user-scalable=0">
-  <link rel="shortcut icon"  href="/favicon.ico"/>
-  <!-- 註解 normalize.css -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"> -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>中午吃什麼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,user-scalable=0">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <!-- 註解 normalize.css -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css"> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="http://mockjs.com/dist/mock.js"></script>
+    <script>
+        let RestaurantsList = [{
+                id: '0',
+                name: '不一樣乾麵',
+                img: 'food_01.jpg',
+                price: '普通',
+                purpose: '一般',
+            },
+            {
+                id: '1',
+                name: '廖嬌米粉湯',
+                img: 'food_02.jpg',
+                price: '普通',
+                purpose: '一般',
+            },
+            {
+                id: '2',
+                name: '台北城第1家炒泡麵',
+                img: 'food_03.jpg',
+                price: '便宜',
+                purpose: '一般',
+            },
+            {
+                id: '3',
+                name: '建宏雞肉飯',
+                img: 'food_04.jpg',
+                price: '普通',
+                purpose: '聚餐',
+            },
+            {
+                id: '4',
+                name: '阿財魚翅羹',
+                img: 'food_05.jpg',
+                price: '便宜',
+                purpose: '聚餐',
+            },
+            {
+                id: '5',
+                name: '5味臭臭鍋 延吉店',
+                img: 'food_06.jpg',
+                price: '高價',
+                purpose: '慶生',
+            },
+            {
+                id: '6',
+                name: 'Okaeri お帰り 你回來啦拉麵',
+                img: 'food_07.jpg',
+                price: '高價',
+                purpose: '慶生',
+            },
+        ]
+        Mock.mock('/api/getRestaurantsList', 'get', RestaurantsList)
+        $.ajax({
+            url: '/api/getRestaurantsList',
+            dataType: 'json',
+            success: function (result) {
+                console.log(result)
+            }
+        })
+
+    </script>
 </head>
 
 <body>
-  <div id="app"></div>
-  <script src="./dist/build.js"></script>
+    <div id="app"></div>
+    <script src="./dist/build.js"></script>
 </body>
 
 </html>
