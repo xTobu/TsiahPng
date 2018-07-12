@@ -45,9 +45,9 @@ ul li {
 }
 
 body {
-   
     color: white;
 }
+
 body:before {
     content: "";
     display: block;
@@ -62,7 +62,7 @@ body:before {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
 
 .txt p span {
     display: block;
