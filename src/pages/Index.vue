@@ -279,7 +279,7 @@ export default {
 				);
 			});
 			// 如果查無資料
-			if (arrFiltered.length == 0) {
+			if (arrFiltered.length === 0) {
 				alert('查無資料');
 				return;
 			}
