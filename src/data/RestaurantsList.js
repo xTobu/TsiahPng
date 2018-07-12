@@ -49,5 +49,4 @@ const RestaurantList = [
 		purpose: '慶生',
 	},
 ];
-
 export default RestaurantList;
