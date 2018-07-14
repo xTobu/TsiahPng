@@ -237,9 +237,12 @@ export default {
 		},
 	},
 	methods: {
+        // 取得圖片路徑
 		getImgUrl: function(name) {
 			return require('../assets/images/' + name);
-		},
+        },
+
+        // scrollto 滾動設定
 		funcGoto(classname) {
 			$('html, body').animate(
 				{
@@ -250,13 +253,13 @@ export default {
 				400
 			);
 		},
-
+        // 設定開關
 		funcSwitch() {
 			this.state.switch === 'more'
 				? (this.state.switch = 'less')
 				: (this.state.switch = 'more');
 		},
-
+        // 取得隨機資料
 		funcGetRandom() {
 			let filterPrice = undefined;
 			let filterPurpose = undefined;
